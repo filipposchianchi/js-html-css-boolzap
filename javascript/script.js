@@ -19,8 +19,6 @@ $( document ).ready(function() {
 
         // ripuliamo il contenuto dell'input, per UX
         $(".messaggio").val("");
-
-
     })
 
 

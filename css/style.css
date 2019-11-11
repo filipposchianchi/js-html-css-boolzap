@@ -241,8 +241,8 @@ button {
 
 .msgsent {
     background-color: #dcf8c6;
-    border-radius: 15px;
-    padding-top: 10px;
+    border-radius: 10px;
+    padding-top: 3px;
     padding-bottom: 10px;
     padding-left: 15px;
     padding-right: 40px;

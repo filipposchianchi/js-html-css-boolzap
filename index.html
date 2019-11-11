@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <header></header>
@@ -67,14 +68,39 @@
                     <img src="assets/icona3.svg" alt="">
                 </div>
             </div>
+            <div class="conversazione">
+                <!-- <div class="primo-messaggio">Ciao sono il primo messaggio 
+                </div> -->
+                
+                <div id="container">
+      
+                </div>
+
+            </div>
             <div class="barra-invio">
                 <img src="assets/icona7.svg" alt="">
-                <input type="text" placeholder="    Scrivi un messaggio">
-                <img src="assets/icona6.svg" alt="">
+                <input type="text" placeholder=" Scrivi un messaggio" class="messaggio">
+                <button class="invio">
+                    <img src="assets/icona6.svg" alt="">
+                </button>
+            
             </div>
 
         </div>
     </div>
+
+
+
+    <!-- blocco template non visibile in pagina -->
+    <div id="template">
+        <div class='msgsent'>
+            <p class="testo"> </p>
+            <span class="orario">10:10</span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="javascript/script.js"></script>
+
 
 </body>
 </html>

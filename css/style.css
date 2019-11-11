@@ -22,13 +22,13 @@ body {
     transform: translate(-50%);
     z-index: 999;
     height: calc(100% - 70px);
-    width: 1100px;
+    width:  90%;
     display: flex;
 }
 
 /*colonna varie chat*/
 .nav-chat {
-    width: 400px;
+    width: 30%;
     height: 100%;
 }
 
@@ -64,31 +64,63 @@ body {
     height: 30px;
     border-radius: 20px;
     border: none;
+    background-image: url('../assets/icona4.svg');
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    background-position: 5px 4px;
+    background-color: white;
 }
 
 .nav-chat .top-nav .icons img {
     margin-left: 15px;
 }
 
+/*regole blocco notifiche*/
+.nav-chat .notifiche {
+    height: 80px;
+    background-color: #9de1fe;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.nav-chat .notifiche img {
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+}
+.nav-chat .notifiche h2 {
+    font-size: 17px;
+}
+.nav-chat .notifiche h3 {
+    font-size: 15px;
+    color: #457688;
+    font-weight: lighter;
+    text-decoration: underline;
+}
+
 /*regole varie chat*/
 .chats {
     display: flex;
     flex-direction: column;
-    height: calc((100% - 70px) - 40px);
+    height: calc((100% - 70px) - 120px);
     overflow-y: scroll;
-    background-color: white;;
+    background-color: white;
 
 }
 
-.chats .chat1, .chats .chat2, .chats .chat3, .chats .chat4, .chats .chat5 {
+.chats .chat1, .chats .chat2, .chats .chat3, .chats .chat4, .chats .chat5, .chats .chat6, .chats .chat7, .chats .chat8 {
     width: 100%;
-    height: 70px;
+    min-height: 80px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid lightgrey;
 }
 
-.chats .chat1 img, .chats .chat2 img, .chats .chat3 img, .chats .chat4 img, .chats .chat5 img {
+.chats .chat1 img, .chats .chat2 img, .chats .chat3 img, .chats .chat4 img, .chats .chat5 img, .chats .chat6 img, .chats .chat7 img,.chats .chat8 img {
     width: 55px;
     height: 55px;
     border-radius: 50%;
@@ -99,7 +131,7 @@ body {
     background-color: #eeeeee;
 }
 
-.chats .chat1 span, .chats .chat2 span, .chats .chat3 span, .chats .chat4 span, .chats .chat5 span {
+.chats .chat1 span, .chats .chat2 span, .chats .chat3 span, .chats .chat4 span, .chats .chat5 span,.chats .chat6 span, .chats .chat7 span, .chats .chat8 span {
     align-self: flex-start;
     margin-top: 10px;
     margin-left: 20px;
@@ -108,7 +140,7 @@ body {
 
 /*regole pagina conversazione*/
 .chat {
-    width: 700px;
+    width: 70%;
     height: 100%;
     background-image: url(../assets/sfondochat.jpg);
     position: relative;
@@ -143,6 +175,11 @@ body {
 }
 .chat .top-bar .icons img {
     margin-left: 20px;
+}
+
+.chat .top-bar h5 {
+    color: grey;
+    font-weight: lighter;
 }
 
 .send {
@@ -183,12 +220,6 @@ button {
     padding: 10px 15px;
 }
 
-.chat .conversazione .primo-messaggio {
-    background-color: #dcf8c6;
-    border-radius: 20px;
-    padding: 10px 15px;
-
-}
 
 #template {
     display: none;
@@ -202,6 +233,7 @@ button {
 #container {
     background-color: #dcf8c6;
     border-radius: 20px;
+    margin: 50px 20px;
 }
 
 

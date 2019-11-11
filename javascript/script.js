@@ -27,12 +27,10 @@ $( document ).ready(function() {
         $(".send").css("display", "inline-block")
     })
 
-
+/* ritorno all'icon del vocale se clicco fuori dall input*/
     $('body').click(function(evt){    
         if(evt.target.id == "messaggio")
            return; 
- 
-       //Do processing of click event here for every element except with id menu_content
         $(".vocale").css("display", "inline-block");
         $(".send").css("display", "none")
  

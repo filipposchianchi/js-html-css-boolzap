@@ -16,15 +16,14 @@ $( document ).ready(function() {
             elmentmsg.find(".testo").text(messaggio);
             
             // appendiamo una copia con testo valorizzato del div "msgsent"
-            $("#container").append(elmentmsg);
+            $("#conversazione").append(elmentmsg);
 
             // ripuliamo il contenuto dell'input, per UX
             $(".messaggio").val("");
         } else {
             return;
-        }
-        
-        
+        } 
+
     })
 
 /* cambio di icon quando clicco sul input */

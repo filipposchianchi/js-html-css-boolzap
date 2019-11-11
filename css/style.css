@@ -137,6 +137,17 @@ body {
     margin-left: 20px;
 } 
 
+.chats .chat1 .container, .chats .chat2 .container, .chats .chat3 .container, .chats .chat4 .container, .chats .chat5 .container, .chats .chat6 .container, .chats .chat7 .container, .chats .chat8 .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.chats .container .anteprima {
+    color: grey;
+    font-size: 13px;
+}
+
+
 
 /*regole pagina conversazione*/
 .chat {
@@ -214,8 +225,11 @@ button {
 }
 
 /*regole conversazione*/
-.chat .conversazione {
+.chat #conversazione {
+    height: calc(100% - 120px);
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: flex-end;
     padding: 10px 15px;
 }
@@ -226,14 +240,29 @@ button {
 }
 
 .msgsent {
-    padding: 10px 15px;
-}
-
-
-#container {
     background-color: #dcf8c6;
-    border-radius: 20px;
-    margin: 50px 20px;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 40px;
+    margin-top: 20px;
+    position: relative;
 }
 
+.msgsent .testo {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.msgsent .orario {
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+}
 
+.msgsent img {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+}

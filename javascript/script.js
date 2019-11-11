@@ -21,6 +21,13 @@ $( document ).ready(function() {
         $(".messaggio").val("");
     })
 
+/* cambio di icon quando clicco sul input */
+    $(".messaggio").click(function (){
+        $(".vocale").css("display", "none");
+        $(".send").css("display", "inline-block")
+    })
 
+    
 
 });
+

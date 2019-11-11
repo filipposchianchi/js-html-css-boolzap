@@ -145,6 +145,16 @@ body {
     margin-left: 20px;
 }
 
+.send {
+    display: none;
+    height: 20px;
+    width: 20px;
+}
+button {
+    border: none;
+    margin-right: 20px;
+}
+
 /*regole barra di invio*/
 .chat .barra-invio {
     position: absolute;

@@ -118,6 +118,7 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 1px solid lightgrey;
+    position: relative;
 }
 
 .chats .chat1 img, .chats .chat2 img, .chats .chat3 img, .chats .chat4 img, .chats .chat5 img, .chats .chat6 img, .chats .chat7 img,.chats .chat8 img {
@@ -147,6 +148,12 @@ body {
     font-size: 13px;
 }
 
+.chats .orario {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 12px;
+}
 
 
 /*regole pagina conversazione*/

@@ -11,7 +11,6 @@ $( document ).ready(function() {
             if (k.keyCode == "13") {
                 invioMessaggio();
             }
-            
         }
     })
 
@@ -38,7 +37,6 @@ $( document ).ready(function() {
         }
  });
 
-   
  
  function invioMessaggio() {
 
@@ -49,7 +47,6 @@ $( document ).ready(function() {
 
         // cloniamo (facciamo una copia) del div con classe "msgsent" che sta dentro un div con ID "template"
         var elmentmsg = $("#template .msgsent").clone();
-
 
         // modifica questa copia di "msgsent" aggiungendogli il testo del messaggio
         elmentmsg.find(".testo").text(messaggio);

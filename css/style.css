@@ -112,7 +112,7 @@ body {
 
 }
 
-.chats .chat1, .chats .chat2, .chats .chat3, .chats .chat4, .chats .chat5, .chats .chat6, .chats .chat7, .chats .chat8 {
+.chats .single-chat {
     width: 100%;
     min-height: 80px;
     display: flex;
@@ -121,26 +121,26 @@ body {
     position: relative;
 }
 
-.chats .chat1 img, .chats .chat2 img, .chats .chat3 img, .chats .chat4 img, .chats .chat5 img, .chats .chat6 img, .chats .chat7 img,.chats .chat8 img {
+.chats .single-chat img {
     width: 55px;
     height: 55px;
     border-radius: 50%;
     margin-left: 15px;
 }
 
-.chats .chat1 {
+.chats .selected-chat {
     background-color: #eeeeee;
 }
 
-.chats .chat1 span, .chats .chat2 span, .chats .chat3 span, .chats .chat4 span, .chats .chat5 span,.chats .chat6 span, .chats .chat7 span, .chats .chat8 span {
+.chats .single-chat span {
     align-self: flex-start;
     margin-top: 10px;
-    margin-left: 20px;
 } 
 
-.chats .chat1 .container, .chats .chat2 .container, .chats .chat3 .container, .chats .chat4 .container, .chats .chat5 .container, .chats .chat6 .container, .chats .chat7 .container, .chats .chat8 .container {
+.chats .single-chat .container{
     display: flex;
     flex-direction: column;
+    margin-left: 20px;
 }
 
 .chats .container .anteprima {
@@ -154,6 +154,8 @@ body {
     right: 15px;
     font-size: 12px;
 }
+
+
 
 
 /*regole pagina conversazione*/

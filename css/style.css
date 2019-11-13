@@ -121,6 +121,11 @@ body {
     position: relative;
 }
 
+.chats .single-chat:hover {
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
 .chats .single-chat img {
     width: 55px;
     height: 55px;
@@ -207,6 +212,10 @@ body {
     height: 20px;
     width: 20px;
 }
+.send:hover{
+    cursor: pointer;
+
+}
 button {
     border: none;
     margin-right: 20px;
@@ -239,7 +248,6 @@ button {
     display: flex;
     padding: 10px 15px;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: flex-end;
     overflow-y: scroll;
 }
@@ -257,6 +265,8 @@ button {
     padding-right: 40px;
     margin-top: 20px;
     position: relative;
+    max-width: 50%;
+    word-wrap: break-word;
 }
 
 .msgsent .testo {
@@ -280,5 +290,7 @@ button {
 .msgcomputer {
     background-color: white;
     display: inline-block;
-    margin-right: 715px;   
+    align-self: flex-start;
+    max-width: 50%;
+    word-wrap: break-word;
 }

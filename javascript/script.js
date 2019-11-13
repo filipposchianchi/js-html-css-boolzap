@@ -2,17 +2,21 @@ $( document ).ready(function() {
 
     //agganciamo al click sul bottone la funzione di callbnack
     $(".invio").click(function(){
-        invioMessaggio();
+        var messaggioInviato = invioMessaggio();
 
-        setTimeout( messaggioPc, 1000);
+        if(messaggioInviato === true) {
+            setTimeout( messaggioPc, 1000);
+        }
     })
 
     //invio messaggio al click del pulsante invio
     $(window).on({
         keyup: function (k) {            
             if (k.keyCode == "13") {
-                invioMessaggio();
-                setTimeout( messaggioPc, 1000);
+                var messaggioInviato = invioMessaggio();
+                if(messaggioInviato === true) {
+                    setTimeout( messaggioPc, 1000);
+                }
             }
         }
     })
@@ -51,7 +55,6 @@ $( document ).ready(function() {
             }
          });
     });
-
 });
    
 
@@ -73,8 +76,9 @@ $( document ).ready(function() {
 
         // ripuliamo il contenuto dell'input, per UX
         $(".messaggio").val("");
+        return true;
     } else {
-        return;
+        return false
     }
 
     

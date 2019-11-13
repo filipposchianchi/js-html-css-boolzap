@@ -3,6 +3,8 @@ $( document ).ready(function() {
     //agganciamo al click sul bottone la funzione di callbnack
     $(".invio").click(function(){
         invioMessaggio();
+
+        setTimeout( messaggioPc, 1000);
     })
 
     //invio messaggio al click del pulsante invio
@@ -10,6 +12,7 @@ $( document ).ready(function() {
         keyup: function (k) {            
             if (k.keyCode == "13") {
                 invioMessaggio();
+                setTimeout( messaggioPc, 1000);
             }
         }
     })
@@ -57,22 +60,38 @@ $( document ).ready(function() {
 
     //ci salviamo il valore dell'input inserito dall'utente
     var messaggio = $(".messaggio").val();
-    console.log(messaggio);
     if(messaggio.length != 0) {
 
         // cloniamo (facciamo una copia) del div con classe "msgsent" che sta dentro un div con ID "template"
-        var elmentmsg = $("#template .msgsent").clone();
+        var elementmsg = $("#template .msgsent").clone();
 
         // modifica questa copia di "msgsent" aggiungendogli il testo del messaggio
-        elmentmsg.find(".testo").text(messaggio);
+        elementmsg.find(".testo").text(messaggio);
         
         // appendiamo una copia con testo valorizzato del div "msgsent"
-        $("#conversazione").append(elmentmsg);
+        $(".container-conversazione").append(elementmsg);
 
         // ripuliamo il contenuto dell'input, per UX
         $(".messaggio").val("");
     } else {
         return;
     }
+
+    
 };
+
+function messaggioPc() {
+
+    var messaggio = "ok";
+
+    var elementmsg = $("#template .msgsent").clone();
+
+    elementmsg.find(".testo").text(messaggio);
+
+    elementmsg.addClass("msgcomputer")
+
+    $(".container-conversazione").append(elementmsg);
+};
+
+
 

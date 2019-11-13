@@ -2,10 +2,10 @@ $( document ).ready(function() {
 
     //agganciamo al click sul bottone la funzione di callbnack
     $(".invio").click(function(){
-
         invioMessaggio();
     })
 
+    //invio messaggio al click del pulsante invio
     $(window).on({
         keyup: function (k) {            
             if (k.keyCode == "13") {
@@ -15,7 +15,6 @@ $( document ).ready(function() {
     })
 
 
-    
     /* cambio di icon quando clicco sul input */
     $(".messaggio").click(function (){
         $(".vocale").css("display", "none");
@@ -35,7 +34,23 @@ $( document ).ready(function() {
             $(".send").css("display", "inline-block")
 
         }
- });
+    });
+
+    /*evento per cercare in conversazioni recenti */
+    $(".search").keyup(function() {
+        var searchText = $(this).val().toLowerCase();
+        $(".single-chat").each(function() {
+            var elemento = $(this).find(".nomeuser").text();
+            if($(this).find(".nomeuser").text().toLowerCase().includes(searchText)) {
+              $(this).show();
+            } else {
+             $(this).hide();
+            }
+         });
+    });
+
+});
+   
 
  
  function invioMessaggio() {
@@ -58,9 +73,6 @@ $( document ).ready(function() {
         $(".messaggio").val("");
     } else {
         return;
-    } 
-}
-
-
-});
+    }
+};
 

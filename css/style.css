@@ -259,8 +259,13 @@ button {
     
 }
 
+.cancella-msg {
+    display: none;
+}
+
 #template {
     display: none;
+    position: relative;
 }
 
 .msgsent {
@@ -274,6 +279,7 @@ button {
     position: relative;
     max-width: 50%;
     word-wrap: break-word;
+    
 }
 
 .msgsent .testo {
@@ -301,3 +307,36 @@ button {
     max-width: 50%;
     word-wrap: break-word;
 }
+
+.msgsent i {
+    visibility: hidden;
+    font-size: 11px;
+}
+
+.msgsent:hover i {
+    visibility: visible;
+}
+
+
+/*dropdown menu*/
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 41px;
+    left: -6px;
+    width: 110px;  
+}
+
+.dropdown-content{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.dropdown-content span {
+    margin-bottom: 10px;
+}
+

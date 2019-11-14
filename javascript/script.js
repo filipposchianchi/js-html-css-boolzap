@@ -67,6 +67,18 @@ $( document ).ready(function() {
     })
 
 
+
+    /*click sul messaggio per far comparire il dropdown menu */
+
+    $(document).on( "click", ".msgsent", function() {
+        $(this).find(".dropdown-menu").toggle();
+        $(this).find(".dropdown-menu .dropdown-content .elimina-msg").click( function () {
+            $(this).parents(".msgsent").removeClass("msgcomputer");
+            $(this).parents(".msgsent").addClass("cancella-msg");
+        })
+    });
+
+
 });
    
 

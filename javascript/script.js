@@ -64,6 +64,12 @@ $( document ).ready(function() {
         $(".my-chat").removeClass("active");
         $(this).addClass("selected-chat");
         $(".my-chat[data-ref=" + numeroChat + "]").addClass("active");
+
+        /*cambio il nome della chat e dell immagine quando clicco sulla conversazione */
+        var nomeChat = ($(this).find(".nomeuser").text());
+        $(".nome-chat .nome").text(nomeChat);
+        var fotoChat =($(this).find("img").attr('src'));
+        $(".nome-chat-img img").attr("src", fotoChat);
     })
 
 

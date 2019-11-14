@@ -55,6 +55,18 @@ $( document ).ready(function() {
             }
          });
     });
+
+
+    //click sulle varie conversazioni
+    $(".single-chat").click( function () {
+        var numeroChat = $(this).attr("data-ref");
+        $(".single-chat").removeClass("selected-chat");
+        $(".my-chat").removeClass("active");
+        $(this).addClass("selected-chat");
+        $(".my-chat[data-ref=" + numeroChat + "]").addClass("active");
+    })
+
+
 });
    
 
@@ -72,7 +84,7 @@ $( document ).ready(function() {
         elementmsg.find(".testo").text(messaggio);
         
         // appendiamo una copia con testo valorizzato del div "msgsent"
-        $(".container-conversazione").append(elementmsg);
+        $(".container-conversazione .active").append(elementmsg);
 
         // ripuliamo il contenuto dell'input, per UX
         $(".messaggio").val("");
@@ -94,7 +106,7 @@ function messaggioPc() {
 
     elementmsg.addClass("msgcomputer")
 
-    $(".container-conversazione").append(elementmsg);
+    $(".container-conversazione .active").append(elementmsg);
 };
 
 

@@ -245,11 +245,18 @@ button {
 /*regole conversazione*/
 .container-conversazione {
     height: calc(100% - 120px);
+    overflow-y: scroll;
+}
+.my-chat {
+    
+    display: none;
+}
+.active {
     display: flex;
     padding: 10px 15px;
     flex-direction: column;
     align-items: flex-end;
-    overflow-y: scroll;
+    
 }
 
 #template {
